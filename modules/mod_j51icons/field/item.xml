@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="image_modal" class="image-subform">
+		<field name="j51_icon" type="text" default="" label="MOD_J51_ICON" description="MOD_J51_ICON_DESC" />
+		<field name="j51_iconurl" type="text" filter="raw" default="" label="MOD_J51_ICONURL" description="MOD_J51_ICONURL_DESC" />
+		<field name="j51_targeturl" type="radio" default="_self" label="MOD_J51_URLTARGET" description="MOD_J51_URLTARGET_DESC"
+		checked="checked" 
+		class="btn-group"
+		showon="j51_iconurl!:">
+			<option value="_self">JNO</option>
+			<option value="_blank">JYES</option>
+		</field>
+		<field name="j51_icon_title" type="text" size="60" default="" label="MOD_J51_ICONTITLE" description="MOD_J51_ICONTITLE_DESC" />
+		<field name="j51_icon_desc" type="textarea" size="60" default="" label="MOD_J51_ICONDESC" description="MOD_J51_ICONDESC_DESC" />
+		<field name="j51_animate_class" type="text" default="" label="MOD_J51_ANIMATE" description="MOD_J51_ANIMATE_DESC" />
+	</fieldset>
+</form>

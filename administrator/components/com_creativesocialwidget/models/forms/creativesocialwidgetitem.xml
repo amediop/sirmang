@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden"/>
+		<field name="name" type="text" label="COM_CREATIVESOCIALWIDGET_NAME_LABEL" description="COM_CREATIVESOCIALWIDGET_NAME_DESCRIPTION" size="40" class="inputbox" default=""  required="required"/>
+		<field name="id_share" type="sql" default="1" label="COM_CREATIVESOCIALWIDGET_CREATIVE_SHARE_LABEL" description="COM_CREATIVESOCIALWIDGET_CREATIVE_SHARE_DESCRIPTION" query="SELECT sp.name, sp.id FROM #__creativesocialwidget_blocks sp WHERE sp.published != -2" key_field="id" value_field="name" />
+		<field name="id_type" type="sql" default="1" label="COM_CREATIVESOCIALWIDGET_CREATIVE_TYPE_LABEL" description="COM_CREATIVESOCIALWIDGET_CREATIVE_TYPE_DESCRIPTION" query="SELECT sp.name, sp.id FROM #__creativesocialwidget_link_types sp" key_field="id" value_field="name" />
+		<field name="link" type="text" label="COM_CREATIVESOCIALWIDGET_LINK_LABEL" description="COM_CREATIVESOCIALWIDGET_LINK_DESCRIPTION" size="40" class="inputbox" default=""  />
+		<field id="" name="target" type="radio" label="COM_CREATIVESOCIALWIDGET_TARGET_LABEL" description="COM_CREATIVESOCIALWIDGET_TARGET_DESCRIPTION" class="inputbox btn-group" size="1" default="1">
+			<option value="0">COM_CREATIVESOCIALWIDGET_TARGET_SAME</option>
+			<option value="1">COM_CREATIVESOCIALWIDGET_TARGET_NEW</option>
+		</field>
+		
+		<field type="spacer" default="" />
+		<field id="published" name="published" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="created" type="calendar" label="COM_CREATIVESOCIALWIDGET_CREATED_LABEL" default="NOW"  description="COM_CREATIVESOCIALWIDGET_CREATED_DESCRIPTION" class="inputbox" size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+	</fieldset>
+</form>

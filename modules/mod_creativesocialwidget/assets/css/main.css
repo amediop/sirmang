@@ -1,0 +1,87 @@
+.creativesocialwidget_normal_view .creativesocialwidget_wrapper {
+	position: relative;
+	z-index: 10;
+	font-size: 0;
+	margin: 2px auto 0 !important;
+}
+.creativesocialwidget_wrapper {
+	-webkit-transition:  all linear 0.2s;
+	-moz-transition: all linear 0.2s;
+	-o-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+}
+
+.creativesocialwidget_wrapper *{
+	box-sizing: content-box
+}
+.creativesocialwidget_wrapper_aligned_center {
+	text-align: center;
+}
+.creativesocialwidget_wrapper_aligned_left {
+	text-align: left;
+}
+.creativesocialwidget_wrapper_aligned_right {
+	text-align: right;
+}
+
+
+.creativesocialwidget_normal_view .creativesocialwidget_item_wrapper {
+	display: inline-block;
+	position: relative;
+	font-size: 0;
+	vertical-align: top;
+}
+.creativesocialwidget_normal_view .creativesocialwidget_item{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	border-spacing: 0px;
+	background-position: 0px 0px;
+	background-color: transparent !important;
+}
+.creativesocialwidget_normal_view .creativesocialwidget_item img{
+	width: 100%;
+	border: none;
+}
+.creativesocialwidget_normal_view .creativesocialwidget_item a{
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: transparent !important;
+}
+.creativesocialwidget_normal_view .creativesocialwidget_item a:hover{
+	background-color: transparent !important;
+}
+
+/* FIXED VIEW**/
+.creativesocialwidget_fixed_view {
+	position: fixed;
+}
+.creativesocialwidget_fixed_view .creativesocialwidget_item_wrapper {
+	display: block;
+	position: relative;
+	font-size: 0;
+	vertical-align: top;
+}
+.creativesocialwidget_fixed_view .creativesocialwidget_item{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	border-spacing: 0px;
+	background-position: 0px 0px;
+}
+.creativesocialwidget_fixed_view .creativesocialwidget_item img{
+	width: 100%;
+	border: none;
+}
+.creativesocialwidget_fixed_view .creativesocialwidget_item a{
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: transparent !important;
+}
+.creativesocialwidget_fixed_view .creativesocialwidget_item a:hover{
+	background-color: transparent !important;
+}

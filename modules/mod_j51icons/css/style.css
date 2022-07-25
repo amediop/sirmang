@@ -1,0 +1,103 @@
+/* Text */
+.j51_icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.j51_icon > h3,
+.j51_icon > p {
+  position: relative;
+}
+.j51_icon {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.j51_icon figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.j51_icon.boxed figure {
+  padding: 25px 25px 35px;
+  margin: 0;
+}
+.j51_icon figcaption {
+}
+.j51_icon figure > i {
+  text-align: center;
+  flex: 0 0 auto;
+}
+.j51_icon h3 {
+  margin: 0 0 5px;
+  position: relative;
+  line-height: 1.4em;
+}
+.j51_icon p {
+  margin-bottom: 0;
+}
+.j51_icon a {
+    color: inherit;
+}
+.j51_icons > a:first-of-type .j51_icon {
+  border-left: none;
+}
+.j51_icons > a:last-of-type .j51_icon {
+  border-right: none;
+}
+.text-light .j51_icon {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Options */
+.j51_icon_align_center {
+  text-align: center;
+}
+.j51_icon_align_center i {
+  align-self: center;
+}
+.j51_icon_align_right {
+  text-align: right;
+}
+.j51_icon_align_right i {
+  align-self: right;
+}
+
+.j51_icon_layout_col-t-i i {
+  order: 1;
+  margin-top: .5rem;
+}
+
+.j51_icon_layout_row-i-t figure {
+  flex-direction: row;
+}
+.j51_icon_layout_row-i-t i {
+  align-self: center;
+  margin-right: 1.5rem;
+}
+
+.j51_icon_layout_row-t-i figure {
+  flex-direction: row;
+}
+.j51_icon_layout_row-t-i i {
+  order: 1;
+  align-self: center;
+  margin-left: 1.5rem;
+}
+
+.j51_icon_layout_col-i-t i {
+  margin-bottom: 1rem;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 767px) {
+  .j51_icon {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}

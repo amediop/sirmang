@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>Creative Social Widget</name>
+    <creationDate>January 2014</creationDate>
+    <author>Creative Solutions</author>
+    <copyright>Copyright (©) 2008-2014 Creative Solutions. All rights reserved.</copyright>
+    <authorEmail>info@creative-solutions.net</authorEmail>
+    <authorUrl>http://creative-solutions.net</authorUrl>
+    <version>1.0.2</version>
+    <license>GNU/GPL</license>
+    <description>COM_CREATIVESOCIALWIDGET_DESCRIPTION</description>
+    
+    <scriptfile>scriptfile.php</scriptfile>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+    <!-- administration part -->
+    <administration>
+	    <menu view="cpanel" img="components/com_creativesocialwidget/assets/images/project_16.png">COM_CREATIVESOCIALWIDGET_MENU</menu>
+	    <submenu>
+			<menu img="components/com_creativesocialwidget/assets/images/poll_16.png" link="option=com_creativesocialwidget&amp;view=creativesocialwidgetblocks">COM_CREATIVESOCIALWIDGET_SUBMENU_SHARES</menu>
+			<menu img="components/com_creativesocialwidget/assets/images/answer_16.png" link="option=com_creativesocialwidget&amp;view=creativesocialwidgetitems">COM_CREATIVESOCIALWIDGET_SUBMENU_ITEMS</menu>
+		</submenu>
+	    <files folder="admin">
+	        <filename>controller.php</filename>
+	        <filename>creativesocialwidget.php</filename>
+	        <filename>config.xml</filename>
+	        <filename>index.html</filename>
+			
+	        <folder>install</folder>
+	        <folder>assets</folder>
+	        <folder>helpers</folder>
+	        <folder>models</folder>
+	        <folder>tables</folder>
+	        <folder>views</folder>
+	        <folder>controllers</folder>
+	        <folder>elements</folder>
+	        <folder>fields</folder>
+	    </files>
+	    
+	   	<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_creativesocialwidget.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_creativesocialwidget.sys.ini</language>
+		</languages>
+    </administration>
+	<updateservers>
+		<server type="extension" priority="2" name="CreativeSocialWidget"><![CDATA[http://creative-solutions.net/jupdate.php?product=creativesocialwidget]]></server>
+	</updateservers>
+</extension>

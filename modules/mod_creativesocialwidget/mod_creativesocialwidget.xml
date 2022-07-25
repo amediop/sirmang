@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+    <name>Creative Social Widget</name>
+    <creationDate>January 2014</creationDate>
+   <author>Creative Solutions</author>
+    <copyright>Copyright (©) 2008-2014 Creative Solutions. All rights reserved.</copyright>
+    <authorEmail>info@creative-solutions.net</authorEmail>
+    <authorUrl>http://creative-solutions.net</authorUrl>
+    <version>1.0.2</version>
+    <license>GNU/GPL</license>
+    <description>MOD_CREATIVESOCIALWIDGET_DESCRIPTION</description>
+	<files>
+     	<filename>index.html</filename>
+        <filename module="mod_creativesocialwidget">mod_creativesocialwidget.php</filename>
+        <folder>assets</folder>
+	</files>
+	<languages>
+			<language tag="en-GB">language/en-GB/en-GB.mod_creativesocialwidget.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.mod_creativesocialwidget.sys.ini</language>
+	</languages>
+	<config>
+	   	<fields name="params">
+	   		<fieldset name="basic">
+		  		<field type="sql" name="id_share" label="MOD_CREATIVESOCIALWIDGET_SELECT_CREATIVE_SHARE_LABEL" default="" description="MOD_CREATIVESOCIALWIDGET_SELECT_CREATIVE_SHARE_DESCRIPTION" query="SELECT id AS value, name AS id_share FROM #__creativesocialwidget_blocks WHERE `published` = '1'" />
+		  		<field type="text" name="moduleclass_sfx" label="MOD_CREATIVESOCIALWIDGET_MODULE_CLASS_SUFFIX_LABEL" default="" description="MOD_CREATIVESOCIALWIDGET_MODULE_CLASS_SUFFIX_DESCRIPTION" />
+	   		</fieldset>
+	   	</fields>
+	</config>
+</extension>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>J51_Icons</name>
+	<author>Joomla51</author>
+	<creationDate>February 2018</creationDate>
+	<copyright>Copyright (C)2018 Joomla51</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@joomla51.com</authorEmail>
+	<authorUrl>http://www.joomla51.com</authorUrl>
+	<version>2.0.7</version>
+	<description>
+		<![CDATA[<link href="../modules/mod_j51icons/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+		<p>Icons Module by Joomla51</p>
+		<p>If you find this free module extension useful, we would much appreciate you sharing some kinds words in the form of a review.</p>
+		<p><a class="btn" style="margin-right:10px;" target="_blank" href="http://www.joomla51.com/">Joomla51</a><a class="btn btn-primary" target="_blank" href="https://extensions.joomla.org/extension/j51-icons/">Review this Module</a></p>
+	]]></description>
+
+	<files>
+		<filename module="mod_j51icons">mod_j51icons.php</filename>
+		<filename module="mod_j51icons">mod_j51icons.xml</filename>
+		<filename module="mod_j51icons">helper.php</filename>
+		<filename module="mod_j51icons">License.txt</filename>		
+		<filename module="mod_j51icons">index.html</filename>
+		<folder>css</folder>
+		<folder>field</folder>
+		<folder>tmpl</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_j51icons.ini</language>
+	</languages>
+	<config>	
+		<fields name="params">
+			
+			<fieldset name="MOD_J51_GENERALSETTINGS">
+				<field name="j51_icon_columns" type="list" default="33.3%" label="MOD_J51_ICONCOL" description="MOD_J51_ICONCOL_DESC">
+					<option value="100%">1 Column</option>
+					<option value="50%">2 Column</option>
+					<option value="33.3%">3 Column</option>
+					<option value="25%">4 Column</option>
+					<option value="20%">5 Column</option>
+					<option value="16.6%">6 Column</option>
+					<option value="14.28%">7 Column</option>
+					<option value="12.5%">8 Column</option>
+				</field>
+				<field name="j51_icon_layout" type="list" default="center" label="MOD_J51_ICONLAYOUT" description="MOD_J51_ICONLAYOUT_DESC">
+					<option value="col-i-t">Column - Icon | Text</option>
+					<option value="col-t-i">Column - Text | Icon</option>
+					<option value="row-i-t">Row - Icon | Text</option>
+					<option value="row-t-i">Row - Text | Icon</option>
+				</field>
+				<field name="j51_icon_align" type="list" default="center" label="MOD_J51_ICONALIGN" description="MOD_J51_ICONALIGN_DESC">
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="j51_icon_margin_x" type="text" default="20" label="MOD_J51_ICON_MARGINX" description="MOD_J51_ICON_MARGINX_DESC" />
+				<field name="j51_icon_margin_y" type="text" default="25" label="MOD_J51_ICON_MARGINY" description="MOD_J51_ICON_MARGINY_DESC" />
+				<field name="j51_bg_style" type="list" default="none" label="MOD_J51_BGSTYLE" description="MOD_J51_BGSTYLE_DESC">
+					<option value="none">None</option>
+					<option value="boxed">Boxed</option>
+				</field>
+				<field name="j51_bg_color" type="color" default="#ffffff" label="MOD_J51_BGCOLOR" description="MOD_J51_BGCOLOR_DESC" showon="j51_bg_style:boxed"/>
+			</fieldset>
+
+			<fieldset name="MOD_J51_ICON_SETTINGS">
+				<field label="MOD_J51_ICONSETINFO" type="spacer" class="alert alert-grey"/>	
+				<field name="j51_icon_set" type="list" default="fa" label="Icon Font Set" description="Select the icon font set">
+					<option value="fa">FontAwesome</option>
+					<option value="ps7">Pixeden Stroke 7</option>
+					<option value="typcn">Typicons</option>
+					<option value="bicon">Bicon</option>
+				</field>
+				<field name="j51_icon_size" type="list" default="56" label="MOD_J51_ICONSIZE" description="MOD_J51_ICONSIZE_DESC">
+					<option value="20">20px</option>
+					<option value="22">22px</option>
+					<option value="24">24px</option>
+					<option value="26">26px</option>
+					<option value="28">28px</option>
+					<option value="30">30px</option>
+					<option value="32">32px</option>
+					<option value="34">34px</option>
+					<option value="36">36px</option>
+					<option value="38">38px</option>
+					<option value="40">40px</option>
+					<option value="42">42px</option>
+					<option value="44">44px</option>
+					<option value="46">46px</option>
+					<option value="48">48px</option>
+					<option value="50">50px</option>
+					<option value="52">52px</option>
+					<option value="54">54px</option>
+					<option value="56">56px</option>
+					<option value="58">58px</option>
+					<option value="60">60px</option>
+					<option value="62">62px</option>
+					<option value="64">64px</option>
+					<option value="66">66px</option>
+					<option value="68">68px</option>
+				</field>
+				<field name="j51_icon_color" type="color" default="#7d7d7d" label="MOD_J51_ICONCOLOR" description="MOD_J51_ICONCOLOR_DESC" />
+				<field name="j51_icon_style" type="list" default="none" label="MOD_J51_ICONSTYLE" description="MOD_J51_ICONSTYLE_DESC">
+					<option value="none">None</option>
+					<option value="square">Square</option>
+					<option value="circle">Circle</option>
+				</field>
+				<field name="j51_icon_bg_color" type="color" format="rgba" default="rgba(125, 125, 125, 1)" label="MOD_J51_ICONBGCOLOR" description="MOD_J51_ICONBGCOLOR_DESC" showon="j51_icon_style:square[OR]j51_icon_style:circle" />
+				<field name="j51_icon_border_size" type="list" default="2" label="MOD_J51_ICONBORDERSIZE" description="MOD_J51_ICONBORDERSIZE_DESC" showon="j51_icon_style:square[OR]j51_icon_style:circle">
+					<option value="0">0px</option>
+					<option value="1">1px</option>
+					<option value="2">2px</option>
+					<option value="3">3px</option>
+					<option value="4">4px</option>
+					<option value="5">5px</option>
+				</field>
+				<field name="j51_icon_border_color" type="color" format="rgba" default="rgba(125, 125, 125, 1)" label="MOD_J51_ICONBORDERCOLOR" description="MOD_J51_ICONBORDERCOLOR_DESC" showon="j51_icon_style:square[OR]j51_icon_style:circle" />
+			</fieldset>
+			
+			<fieldset name="MOD_J51_ICONS">
+				<field name="j51_items" type="subform" formsource="modules/mod_j51icons/field/item.xml" class="advancedSelect" min="1" max="50" multiple="true" layout="joomla.form.field.subform.repeatable" groupByFieldset="true" label="Icon(s)" description="Add icons(s) to display" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
